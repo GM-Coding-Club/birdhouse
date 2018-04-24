@@ -25,6 +25,7 @@ dependencies: \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/React/Views/RCTComponent.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/React/Views/SafeAreaView/RCTSafeAreaShadowView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/React/Views/RCTShadowView.h \
+  /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/React/Views/RCTLayout.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/React/Base/RCTRootView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/React/Views/SafeAreaView/RCTSafeAreaView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/React/Views/RCTView.h \

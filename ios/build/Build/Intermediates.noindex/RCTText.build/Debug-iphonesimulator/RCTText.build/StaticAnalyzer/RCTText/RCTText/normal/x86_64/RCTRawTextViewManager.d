@@ -25,4 +25,5 @@ dependencies: \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Text/RawText/RCTRawTextShadowView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h

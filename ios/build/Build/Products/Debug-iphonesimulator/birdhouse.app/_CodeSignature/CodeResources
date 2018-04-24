@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		ttRl94jH7aLuFqHzA874fPqLvNE=
+		r1sc95iHufOepZLmUbmrPrDMxEg=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -51,35 +51,35 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rgoVPCoUtp5/PS2ZkHDe/TLgu6s=
+		I9x96uaBNmp9yzHaRx2zMEjwi/8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>PlugIns/birdhouseTests.xctest.dSYM/Contents/Info.plist</key>
+		<data>
+		WtVZNl99C5uy69oKQwUzt8NKA70=
+		</data>
+		<key>PlugIns/birdhouseTests.xctest.dSYM/Contents/Resources/DWARF/birdhouseTests</key>
+		<data>
+		LcEnXcl4ZymhHZYkn5u4Od8Ycwc=
+		</data>
 		<key>PlugIns/birdhouseTests.xctest/Info.plist</key>
 		<data>
 		WmNfzkUfCBFYCmXt5VpZRZmlFMA=
 		</data>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeDirectory</key>
-		<data>
-		yWkk0S7qP08T1fu3V49j5BsKVXA=
-		</data>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeRequirements</key>
-		<data>
-		OnX22wWFKRSOFN1+obRynMCeyXM=
-		</data>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		1UU8OMjR2sda7ZBgeGSqTDu6Xgk=
-		</data>
 		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		NHRG4xvwfHrF+fM/HVVWGLZ1+OE=
+		qR0pxhb7Kqpq4Y+Hzm2exfMfaXY=
 		</data>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeSignature</key>
+		<key>PlugIns/birdhouseTests.xctest/birdhouseTests</key>
 		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		NqSyHrh45gUq+AAL0uZ422AANq0=
+		</data>
+		<key>lost_jungle_looping.mp3</key>
+		<data>
+		l2iR3Yqr9tu+ztKxrFlrdCKy4ns=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -88,11 +88,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ttRl94jH7aLuFqHzA874fPqLvNE=
+			r1sc95iHufOepZLmUbmrPrDMxEg=
 			</data>
 			<key>hash2</key>
 			<data>
-			WP9yVtp8Cahe1FvEYGlYDDE/SGCgVwIDZtCB5wNX5hs=
+			h95UoXglPI7Ox8Tsviw0vBJwMOlxU2TyT/Z8q0FVcbM=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -196,6 +196,28 @@
 			npuwVsQMT6N9VGE0YqH9a729MzPY+LnokIqdklNFhIs=
 			</data>
 		</dict>
+		<key>PlugIns/birdhouseTests.xctest.dSYM/Contents/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WtVZNl99C5uy69oKQwUzt8NKA70=
+			</data>
+			<key>hash2</key>
+			<data>
+			fmnJsc+czDiyL8a4GoaavpPvP+BVWWbwwfbK1uWGDTU=
+			</data>
+		</dict>
+		<key>PlugIns/birdhouseTests.xctest.dSYM/Contents/Resources/DWARF/birdhouseTests</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LcEnXcl4ZymhHZYkn5u4Od8Ycwc=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZCTUGnQ90Zvq9xt6yRWeYJt2aNm2Jk/duN1o29U35q8=
+			</data>
+		</dict>
 		<key>PlugIns/birdhouseTests.xctest/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -207,59 +229,37 @@
 			0zk7Fo8xpLTe9NDClx3ZdId+TcFxvTo1i+66A5IKwn4=
 			</data>
 		</dict>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeDirectory</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yWkk0S7qP08T1fu3V49j5BsKVXA=
-			</data>
-			<key>hash2</key>
-			<data>
-			OaRkq+uMd85hPkgZHakaOvrtUGlg/+r1m1lsLvaiUx0=
-			</data>
-		</dict>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeRequirements</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OnX22wWFKRSOFN1+obRynMCeyXM=
-			</data>
-			<key>hash2</key>
-			<data>
-			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
-			</data>
-		</dict>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1UU8OMjR2sda7ZBgeGSqTDu6Xgk=
-			</data>
-			<key>hash2</key>
-			<data>
-			3uExgUZ8Jb2+7ojpGZtJ4zE26QWdUOFW5setF4NRqj4=
-			</data>
-		</dict>
 		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NHRG4xvwfHrF+fM/HVVWGLZ1+OE=
+			qR0pxhb7Kqpq4Y+Hzm2exfMfaXY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hz/ix+bw1ONN6ie0crS7/GYywDz/FU7SeMDh2gJYY1Q=
+			Tbs8qGAZ0nmn/ov0hNMfPUQZl1dWymPUBRVa9cbNBl4=
 			</data>
 		</dict>
-		<key>PlugIns/birdhouseTests.xctest/_CodeSignature/CodeSignature</key>
+		<key>PlugIns/birdhouseTests.xctest/birdhouseTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+			NqSyHrh45gUq+AAL0uZ422AANq0=
 			</data>
 			<key>hash2</key>
 			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			iL2f6MsbzQJlcmnyY4CMOelLuimLXL89pic9bEa/FUs=
+			</data>
+		</dict>
+		<key>lost_jungle_looping.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l2iR3Yqr9tu+ztKxrFlrdCKy4ns=
+			</data>
+			<key>hash2</key>
+			<data>
+			6/xMxnJqxVQ0ztIMZsHdF29sQR7Btx7bG4osdKLeAZo=
 			</data>
 		</dict>
 	</dict>

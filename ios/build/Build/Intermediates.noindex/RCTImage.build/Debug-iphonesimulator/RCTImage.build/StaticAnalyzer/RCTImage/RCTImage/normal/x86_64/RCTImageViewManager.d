@@ -29,5 +29,6 @@ dependencies: \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Image/RCTImageShadowView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Image/RCTImageView.h

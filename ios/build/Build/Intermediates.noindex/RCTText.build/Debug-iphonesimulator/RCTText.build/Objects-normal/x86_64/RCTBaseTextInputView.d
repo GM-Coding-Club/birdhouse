@@ -29,5 +29,7 @@ dependencies: \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Text/TextInput/RCTInputAccessoryView.h \
+  /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Text/TextInput/RCTInputAccessoryViewContent.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Text/RCTTextAttributes.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Text/TextInput/RCTTextSelection.h

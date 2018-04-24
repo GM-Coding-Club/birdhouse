@@ -27,8 +27,10 @@ dependencies: \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAccessibilityManager.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView+Layout.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManager.h \
+  /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManagerUtils.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManagerObserverCoordinator.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Text/Text/RCTTextShadowView.h \
   /Users/Innovador/Dropbox/Work/Companies/FeatheredFriends/birdhouse/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextShadowView.h \
