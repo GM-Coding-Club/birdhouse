@@ -59,7 +59,7 @@ var moveCloud = (state, action) => {
 
 var moveClouds = (state) => {
   return state.map((cloud, index) => {
-    return cloudAssign(cloud, 1)
+    return cloudAssign(cloud, 3)
   })
 }
 
