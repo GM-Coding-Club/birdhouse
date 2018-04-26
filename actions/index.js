@@ -72,3 +72,15 @@ export function moveCloud(id, value) {
 }
 
 // BIRD
+
+// spawn bird (row)
+
+// move bird, horizontal
+
+// stop bird
+
+// start bird
+
+// hide bird
+
+// show bird
