@@ -1,40 +1,41 @@
 
 import React, { Component } from 'react'
-import { Text, ScrollView } from 'react-native'
-import InvertibleScrollView from 'react-native-invertible-scroll-view'
+import { ScrollView } from 'react-native'
+import BoardItemComponent from './BoardItem.js'
+import Dimensions from 'Dimensions'
+
+const window = Dimensions.get('window')
+
+const MIN_CELL_WIDTH = 50
+const NUMBER_OF_CELL_ROW = Math.floor(window.width / MIN_CELL_WIDTH)
+const CELL_WIDTH = window.width / NUMBER_OF_CELL_ROW
+const MIN_CELL_ROWS = Math.ceil(window.height / CELL_WIDTH)
 
 class BoardComponent extends Component {
+  componentDidMount() {
+    this.props.setColumns(NUMBER_OF_CELL_ROW)
+    this.props.addRows(MIN_CELL_ROWS)
+    /* setTimeout(() => { this.scrollView.scrollToEnd() }, 50) */
+  }
   render() {
     return (
-      <InvertibleScrollView inverted ref={(ref) => { 
-          this.scrollView = ref
-      }} onContentSizeChange={() => {
-        this.scrollView.scrollTo({ y: 0, animated: true })
-      }} style={{
-        backgroundColor: "#70C5CE"
+      <ScrollView style={{
+        backgroundColor: 'transparent',
+      }} contentContainerStyle={{
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'flex-start'
+      }} ref={(ref) => { 
+        this.scrollView = ref
       }}>
-        <Text style={{fontSize:96}}>1</Text>
-        <Text style={{fontSize:96}}>2</Text>
-        <Text style={{fontSize:96}}>3</Text>
-        <Text style={{fontSize:96}}>4</Text>
-        <Text style={{fontSize:96}}>5</Text>
-      </InvertibleScrollView>
+      {  
+        this.props.cells.map((cell, index) =>
+          <BoardItemComponent size={ CELL_WIDTH } key={index}/>
+        )
+      }
+      </ScrollView>
     )
   }
 }
-
-// "#70C5CE"
-
-/*
-<ScrollView showsVerticalScrollIndicator={false} style={{
-        backgroundColor: "#70C5CE"
-      }}>
-        <Text style={{fontSize:96}}>1</Text>
-        <Text style={{fontSize:96}}>2</Text>
-        <Text style={{fontSize:96}}>3</Text>
-        <Text style={{fontSize:96}}>4</Text>
-        <Text style={{fontSize:96}}>5</Text>
-      </ScrollView>
-      */
 
 export default BoardComponent

@@ -3,7 +3,8 @@ import React from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import Orientation from 'react-native-orientation'
 import Sound from 'react-native-sound'
-import BoardComponent from './Board.js'
+import SkyBoxComponent from './SkyBox.js'
+import { BoardContainer } from '../containers/'
 
 var playBackgroundMusic = () => {
   var backgroundMusic = new Sound('lost_jungle_looping.mp3', Sound.MAIN_BUNDLE, (error) => {
@@ -25,7 +26,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <BoardComponent/>
+      <BoardContainer/>
     )
   }
 }

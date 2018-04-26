@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux'
 import { spendCash, receiveCash } from '../actions'
-import { Home } from '../components/'
+import { HomeComponent } from '../components/'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -23,6 +23,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const HomeContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home)
+)(HomeComponent)
 
 export default HomeContainer

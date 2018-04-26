@@ -3,7 +3,7 @@ import { RECEIVE_CASH, SPEND_CASH } from '../actions/'
 
 let initialState = 0
 
-const cashReducer = (state = 0, action) => {
+const cashReducer = (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_CASH:
       return (state + action.amount) 

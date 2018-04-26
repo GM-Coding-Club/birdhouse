@@ -1,6 +1,8 @@
 
-import Home from './Home.js'
+import HomeComponent from './Home.js'
+import BoardComponent from './Board.js'
 
 export {
-  Home
+  BoardComponent,
+  HomeComponent
 }
