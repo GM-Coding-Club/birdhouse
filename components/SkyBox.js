@@ -1,15 +1,29 @@
 
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { Image, ScrollView, View } from 'react-native'
+import { BoardContainer } from '../containers/'
+import grass from '../img/grass_bg.jpg'
 
 class SkyBoxComponent extends Component {
   render() {
     return (
-      <View style={{
-        backgroundColor: "#70C5CE"
+      <ScrollView style={{
+        backgroundColor: '#70C5CE',
+      }} contentOffset={{
+        x: 0,
+        y: 0
+      }} ref={(ref) => { 
+        this.scrollView = ref
       }}>
-        { this.props.children }
-      </View>
+        <BoardContainer/>
+        <Image source={grass} style={{
+          flex: 1, 
+          width: "100%", 
+          height: 40, 
+          bottom: 0,
+          resizeMode: "stretch"
+        }}/>
+      </ScrollView>
     )
   }
 }

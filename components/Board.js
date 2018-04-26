@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { View } from 'react-native'
 import BoardItemComponent from './BoardItem.js'
 import Dimensions from 'Dimensions'
 
@@ -19,21 +19,17 @@ class BoardComponent extends Component {
   }
   render() {
     return (
-      <ScrollView style={{
-        backgroundColor: 'transparent',
-      }} contentContainerStyle={{
+      <View style={{
         flexWrap: 'wrap',
         flexDirection: 'row',
         justifyContent: 'flex-start'
-      }} ref={(ref) => { 
-        this.scrollView = ref
       }}>
       {  
         this.props.cells.map((cell, index) =>
-          <BoardItemComponent size={ CELL_WIDTH } key={index}/>
+          <BoardItemComponent size={CELL_WIDTH} key={index}/>
         )
       }
-      </ScrollView>
+      </View>
     )
   }
 }
