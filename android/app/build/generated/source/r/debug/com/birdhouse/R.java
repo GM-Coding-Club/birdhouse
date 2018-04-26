@@ -1980,31 +1980,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f030000;
     }
     public static final class raw {
-        public static final int cloud_1=0x7f070000;
-        public static final int cloud_2=0x7f070001;
-        public static final int cloud_3=0x7f070002;
-        public static final int cloud_4=0x7f070003;
-        public static final int cloud_5=0x7f070004;
-        public static final int cloud_6=0x7f070005;
-        public static final int cloud_7=0x7f070006;
-        public static final int cloud_8=0x7f070007;
-        public static final int cross_pipe=0x7f070008;
-        public static final int fork_pipe_bottom=0x7f070009;
-        public static final int fork_pipe_left=0x7f07000a;
-        public static final int fork_pipe_right=0x7f07000b;
-        public static final int fork_pipe_top=0x7f07000c;
-        public static final int grass_bg=0x7f07000d;
-        public static final int horizontal_pipe=0x7f07000e;
-        public static final int horizontal_pipe_left=0x7f07000f;
-        public static final int horizontal_pipe_right=0x7f070010;
-        public static final int lost_jungle_looping=0x7f070011;
-        public static final int turn_pipe_bottom_left=0x7f070012;
-        public static final int turn_pipe_bottom_right=0x7f070013;
-        public static final int turn_pipe_top_left=0x7f070014;
-        public static final int turn_pipe_top_right=0x7f070015;
-        public static final int vertical_pipe=0x7f070016;
-        public static final int vertical_pipe_bottom=0x7f070017;
-        public static final int vertical_pipe_top=0x7f070018;
+        public static final int lost_jungle_looping=0x7f070000;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f080000;
