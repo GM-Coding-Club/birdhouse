@@ -19,7 +19,7 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     Orientation.lockToLandscape()
-    //playBackgroundMusic()
+    playBackgroundMusic()
   }
 
   render() {

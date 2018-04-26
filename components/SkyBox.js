@@ -6,9 +6,6 @@ import grass from '../img/grass_bg.jpg'
 import CloudComponent from './Cloud.js'
 
 class SkyBoxComponent extends Component {
-  componentDidMount() {
-    this.props.spawnCloud(0,0)
-  }
   render() {
     return (
       <ScrollView style={{

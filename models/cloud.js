@@ -15,10 +15,10 @@ const CloudDirection = {
   RIGHT: 1
 }
 
-var Cloud = (xPos, yPos) => {
+var Cloud = (xPos, yPos, direction) => {
   let type = Math.floor(Math.random() * 8) + 1
   let id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
-  let dir = Math.round(Math.random()) // 0 or 1
+  let dir = (direction !== undefined) ? direction : Math.round(Math.random()) // 0 or 1
   return {
     id: id,
     type: type,
