@@ -1,5 +1,10 @@
 
-import { SPAWN_CLOUD, MOVE_CLOUD } from '../actions/'
+import { 
+  SPAWN_CLOUD, 
+  MOVE_CLOUD, 
+  GAME_TICK
+} from '../actions/'
+
 import { Cloud, CloudDirection, CloudType } from '../models/'
 
 let initialState = []
@@ -14,16 +19,28 @@ var moveCloud = (state, action) => {
     if (cloud.id === action.id) {
       return Object.assign({}, cloud, {
         x: (cloud.dir === CloudDirection.LEFT) ? 
-          (cloud.x - action.value) : 
-          (cloud.x + action.value)
+           (cloud.x - action.value) : 
+           (cloud.x + action.value)
       })
     }
     return cloud
   })
 }
 
+var moveClouds = (state) => {
+  return state.map((cloud, index) => {
+    return Object.assign({}, cloud, {
+      x: (cloud.dir === CloudDirection.LEFT) ? 
+         (cloud.x - 1) : 
+         (cloud.x + 1)
+    })
+  })
+}
+
 const cloudsReducer = (state = initialState, action) => {
   switch (action.type) {
+    case GAME_TICK: 
+      return moveClouds(state)
     case SPAWN_CLOUD:
       return spawnCloud(state, action)
     case MOVE_CLOUD:

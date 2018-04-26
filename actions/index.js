@@ -1,4 +1,14 @@
 
+// GAME
+
+export const GAME_TICK = 'GAME_TICK'
+
+export function gameTick() {
+  return {
+    type: GAME_TICK
+  }
+}
+
 // CASH
 
 export const RECEIVE_CASH = 'RECEIVE_CASH'
