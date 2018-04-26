@@ -2,7 +2,7 @@
 import React from 'react'
 import Orientation from 'react-native-orientation'
 import Sound from 'react-native-sound'
-import SkyBoxComponent from './SkyBox.js'
+import { SkyBoxContainer } from '../containers/'
 
 var playBackgroundMusic = () => {
   var backgroundMusic = new Sound('lost_jungle_looping.mp3', Sound.MAIN_BUNDLE, (error) => {
@@ -11,7 +11,7 @@ var playBackgroundMusic = () => {
       return
     }
     backgroundMusic.setNumberOfLoops(-1)
-    //backgroundMusic.play()
+    backgroundMusic.play()
   })
 }
 
@@ -19,12 +19,12 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     Orientation.lockToLandscape()
-    playBackgroundMusic()
+    //playBackgroundMusic()
   }
 
   render() {
     return (
-      <SkyBoxComponent/>
+      <SkyBoxContainer/>
     )
   }
 }

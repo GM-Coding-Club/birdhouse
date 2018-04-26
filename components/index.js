@@ -1,8 +1,14 @@
 
-import HomeComponent from './Home.js'
 import BoardComponent from './Board.js'
+import BoardItemComponent from './BoardItem.js'
+import CloudComponent from './Cloud.js'
+import HomeComponent from './Home.js'
+import SkyBoxComponent from './SkyBox.js'
 
 export {
   BoardComponent,
-  HomeComponent
+  BoardItemComponent,
+  CloudComponent,
+  HomeComponent,
+  SkyBoxComponent
 }

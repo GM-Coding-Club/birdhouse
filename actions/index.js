@@ -1,4 +1,6 @@
 
+// CASH
+
 export const RECEIVE_CASH = 'RECEIVE_CASH'
 
 export function receiveCash(amount) {
@@ -17,6 +19,8 @@ export function spendCash(amount) {
   }
 }
 
+// BOARD
+
 export const SET_CELL_COLUMNS = 'SET_CELL_COLUMNS'
 
 export function setCellColumns(number) {
@@ -34,3 +38,27 @@ export function addCellRows(rows) {
     rows: (rows > 0 ? rows : 0)
   }
 }
+
+// CLOUD
+
+export const SPAWN_CLOUD = 'SPAWN_CLOUD'
+
+export function spawnCloud(xPos, yPos) {
+  return {
+    type: SPAWN_CLOUD,
+    x: xPos,
+    y: yPos
+  }
+}
+
+export const MOVE_CLOUD = 'MOVE_CLOUD'
+
+export function moveCloud(id, value) {
+  return {
+    type: MOVE_CLOUD,
+    id,
+    value
+  }
+}
+
+// BIRD

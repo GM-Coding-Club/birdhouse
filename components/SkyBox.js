@@ -3,8 +3,12 @@ import React, { Component } from 'react'
 import { Image, ScrollView, View } from 'react-native'
 import { BoardContainer } from '../containers/'
 import grass from '../img/grass_bg.jpg'
+import CloudComponent from './Cloud.js'
 
 class SkyBoxComponent extends Component {
+  componentDidMount() {
+    this.props.spawnCloud(0,0)
+  }
   render() {
     return (
       <ScrollView style={{
@@ -23,6 +27,11 @@ class SkyBoxComponent extends Component {
           bottom: 0,
           resizeMode: "stretch"
         }}/>
+        { 
+          this.props.clouds.map((cloud, index) => {
+            return <CloudComponent key={cloud.id} type={cloud.type} x={cloud.x} y={cloud.y}/>
+          })
+        }
       </ScrollView>
     )
   }
