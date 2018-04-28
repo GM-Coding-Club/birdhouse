@@ -6,9 +6,6 @@
 ## <new line for each name>
 With assistance from Daniel Sinclair 
 
-# Challenges
-### 🛑 
-
 # Necessary Development/Testing Tools
 
 ### Install Git

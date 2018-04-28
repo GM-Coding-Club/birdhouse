@@ -7,7 +7,7 @@ import {
 
 import { Cloud, CloudDirection, CloudType } from '../models/'
 
-const CLOUD_MAX_HORZIONTAL = 3000
+const CLOUD_MAX_HORZIONTAL = 5000
 const CLOUD_MAX_VERTICAL = 6000
 const SPAWN_NUMBER = 200
 
@@ -36,15 +36,24 @@ var spawnCloud = (state, action) => {
   return state.concat(cloud)
 }
 
-var cloudAssign = (cloud, value) => {
+var cloudAssign = (cloud, distance) => {
+  // new direction, i.e. x:5000, LEFT to RIGHT
+  let leftBarrier = CLOUD_MAX_HORZIONTAL * -1
+  let rightBarrier = CLOUD_MAX_HORZIONTAL
+  let tooFarLeft = (cloud.x <= leftBarrier)
+  let tooFarRight = (cloud.x >= CLOUD_MAX_HORZIONTAL)
+  let isTooFar = (tooFarLeft || tooFarRight)
+  let isGoingLeft = (cloud.direction === CloudDirection.LEFT)
+  let oppositeDirection = isGoingLeft ? CloudDirection.RIGHT : CloudDirection.LEFT // YES : NO
+  let newDirection = isTooFar ? oppositeDirection : cloud.direction // YES : NO
+  // new x coordinate, i.e. 5000 to 5001
+  let newLeft = (cloud.x - distance)
+  let newRight = (cloud.x + distance)
+  let newX = isGoingLeft ? newLeft : newRight // YES : NO
+  // updating the cloud
   return Object.assign({}, cloud, {
-    x: (cloud.direction === CloudDirection.LEFT) ? 
-       (cloud.x - value) : 
-       (cloud.x + value),
-    direction: (CLOUD_MAX_HORZIONTAL*-1 < cloud.x < CLOUD_MAX_HORZIONTAL) ?
-      cloud.direction : ( cloud.direction === CloudDirection.LEFT ?
-        CloudDirection.RIGHT : CloudDirection.LEFT
-      )
+    direction: newDirection,
+    x: newX,
   })
 }
 
@@ -59,7 +68,7 @@ var moveCloud = (state, action) => {
 
 var moveClouds = (state) => {
   return state.map((cloud, index) => {
-    return cloudAssign(cloud, 3)
+    return cloudAssign(cloud, 10)
   })
 }
 
