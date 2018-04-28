@@ -3,9 +3,6 @@
 # expo
 .expo/
 
-# dependencies
-/node_modules
-
 # misc
 .env.local
 .env.development.local
@@ -19,3 +16,6 @@ yarn-error.log*
 # build
 ios/build/
 android/.gradle/
+
+# sdk
+android/local.properties
