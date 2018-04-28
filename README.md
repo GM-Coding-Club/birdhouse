@@ -9,13 +9,23 @@ With assistance from Daniel Sinclair
 # Challenges
 ### 🛑 
 
-# How to Run on Android Emulator
+# Necessary Development/Testing Tools
 
 ### Install Git
 Download [Git](https://git-scm.com/downloads) for your computer and follow installation instructions
 
 ### Install Node.js and NPM
 Download the [combined installer](https://nodejs.org/en/download/) and follow installation instructions
+
+# Development Environment
+
+### Install Visual Studio Code
+1. Download the [VSCode app](https://code.visualstudio.com/download) from Microsoft
+2. Open your code repository (folder) with File → Open
+3. Use the Integrated Terminal for commands (like starting the app) instead of Command Line or Terminal (View → Integrated Terminal)
+
+
+# How to Run on Android Emulator
 
 ### Install Android Studio
 1. Download the [installer](https://developer.android.com/studio/)
@@ -49,3 +59,18 @@ Before you run the app each session, you'll need to launch the Android Emulator 
 2. Download the repo: `git clone https://github.com/GM-Coding-Club/birdhouse.git`
 3. Change to its directory: `cd birdhouse`
 4. Start the app: `npm run android`
+
+# How to Run on Android Devices
+
+### Enabled Development Mode on the Device
+1. Open the Settings app
+2. Tap About
+3. Tap the Build number row at the bottom seven times
+4. Go back, and select Developer options
+5. Enable "USB debugging"
+
+### See if your device is visible
+1. Plug your device into your computer
+2. Run `adb devices` in Command Line or the Integrated Terminal
+3. If you see the word `device` on the right side, you're good to go
+4. Start the app the same way: `npm run android` in the repo directory
