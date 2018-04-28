@@ -24,7 +24,6 @@ Download the [combined installer](https://nodejs.org/en/download/) and follow in
 2. Open your code repository (folder) with File → Open
 3. Use the Integrated Terminal for commands (like starting the app) instead of Command Line or Terminal (View → Integrated Terminal)
 
-
 # How to Run on Android Emulator
 
 ### Install Android Studio
@@ -60,7 +59,17 @@ Before you run the app each session, you'll need to launch the Android Emulator 
 3. Change to its directory: `cd birdhouse`
 4. Start the app: `npm run android`
 
+### Setup Development Environment
+1. In Android Studio, open Preferences → System Settings → Android SDK
+2. Copy the Android SDK Location field
+3. In your repo, open the file at `android/local.properties` in a text editor
+4. Paste the SDK Location in place of the placeholder
+5. Save the file
+
 # How to Run on Android Devices
+
+### Ensure correct development environment
+1. Make sure you followed Steps XY in Install Android Studio
 
 ### Enabled Development Mode on the Device
 1. Open the Settings app
@@ -73,4 +82,6 @@ Before you run the app each session, you'll need to launch the Android Emulator 
 1. Plug your device into your computer
 2. Run `adb devices` in Command Line or the Integrated Terminal
 3. If you see the word `device` on the right side, you're good to go
-4. Start the app the same way: `npm run android` in the repo directory
+
+### Start the app
+Use `npm run android` in the repo directory
