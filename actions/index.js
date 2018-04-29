@@ -9,6 +9,24 @@ export function gameTick() {
   }
 }
 
+// GUIDE
+
+export const SHOW_GUIDE = 'SHOW_GUIDE'
+
+export function showGuide() {
+  return {
+    type: SHOW_GUIDE
+  }
+}
+
+export const HIDE_GUIDE = 'HIDE_GUIDE'
+
+export function hideGuide() {
+  return {
+    type: HIDE_GUIDE
+  }
+}
+
 // CASH
 
 export const RECEIVE_CASH = 'RECEIVE_CASH'

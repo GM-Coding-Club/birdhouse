@@ -5,6 +5,7 @@ import CloudComponent from './Cloud.js'
 import HomeComponent from './Home.js'
 import SkyBoxComponent from './SkyBox.js'
 import MenuBarComponent from './MenuBar.js'
+import GuideModalComponent from './GuideModal.js'
 
 export {
   BoardComponent,
@@ -12,5 +13,6 @@ export {
   CloudComponent,
   HomeComponent,
   SkyBoxComponent,
-  MenuBarComponent
+  MenuBarComponent,
+  GuideModalComponent
 }

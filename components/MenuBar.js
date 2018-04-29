@@ -53,7 +53,10 @@ class MenuBarComponent extends Component {
             flexDirection: "row",
             justifyContent: "flex-end"
           }}>
-            <MenuTileComponent style={{ width: 50, height: 50 }} gray={true} emblem={robin}/>
+            <MenuTileComponent style={{ 
+              width: 50, 
+              height: 50 
+            }} gray={true} emblem={robin} onPress={this.props.showGuide}/>
           </View>
         </View>
       </View>

@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux'
 import { MenuBarComponent } from '../components/'
-import { } from '../actions'
+import { showGuide } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -12,7 +12,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    
+    showGuide: () => {
+      dispatch(showGuide())
+    }
   }
 }
 
