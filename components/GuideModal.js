@@ -1,8 +1,17 @@
 
 import React, { Component } from 'react'
-import { Image, ImageBackground, View, Text, TouchableHighlight, Modal } from 'react-native'
+import { 
+  Image, 
+  ImageBackground, 
+  View, 
+  Text, 
+  TouchableHighlight, 
+  Modal,
+  ScrollView
+} from 'react-native'
 import menuBG from '../img/menu_bg.png'
 import close from '../img/close_button.png'
+import GuideCellComponent from './GuideCell.js'
 
 class GuideModalComponent extends Component {
   render() {
@@ -34,6 +43,27 @@ class GuideModalComponent extends Component {
                   top: 0
                 }}/>
               </TouchableHighlight>
+              <ScrollView style={{
+                left: "10%",
+                right: "10%", 
+                width: "80%",
+                flex: 1, 
+                alignSelf: 'flex-start', 
+                flexDirection: 'column',
+                paddingTop: "12%"
+              }}>
+                {
+                  this.props.spottings.length > 0 ? 
+                    this.props.spottings.map((spotting, index) =>
+                      <GuideCellComponent {...spotting} key={index}/>
+                    ) : 
+                    <Text style={{
+                      fontSize: 40,
+                      fontWeight: 'bold',
+                      color: 'white'
+                    }}>You haven't spotted any birds yet 😱</Text>
+                }
+              </ScrollView>
             </ImageBackground>
           </View>
         </View>

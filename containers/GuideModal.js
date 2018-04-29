@@ -5,7 +5,8 @@ import { hideGuide } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    visible: state.guide.visible
+    visible: state.guide.visible,
+    spottings: state.guide.spottings
   }
 }
 
