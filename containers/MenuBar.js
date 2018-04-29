@@ -5,7 +5,8 @@ import { } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    
+    cash: state.cash,
+    store: state.store
   }
 }
 

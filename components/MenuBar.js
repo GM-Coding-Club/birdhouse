@@ -27,7 +27,7 @@ class MenuBarComponent extends Component {
             fontSize: 20,
             fontWeight: 'bold',
             color: 'white'
-          }}>💰 0</Text>
+          }}>💰 {this.props.cash}</Text>
         </View>
         <View style={{
           position: 'absolute',
@@ -42,9 +42,11 @@ class MenuBarComponent extends Component {
             flexDirection: "row",
             justifyContent: "space-around"
           }}>
-            <MenuTileComponent style={{ width: 50, height: 50 }}/>
-            <MenuTileComponent style={{ width: 50, height: 50 }}/>
-            <MenuTileComponent style={{ width: 50, height: 50 }}/>
+            {
+              this.props.store.map((item, index) =>
+                <MenuTileComponent {...item} key={index} style={{ width: 50, height: 50 }}/>
+              )
+            }
           </View>
           <View style={{ 
             width: "20%",
