@@ -3,6 +3,7 @@ import React from 'react'
 import Orientation from 'react-native-orientation'
 import Sound from 'react-native-sound'
 import { SkyBoxContainer } from '../containers/'
+import Dimensions from 'Dimensions'
 
 var playBackgroundMusic = () => {
   var backgroundMusic = new Sound('lost_jungle_looping.mp3', Sound.MAIN_BUNDLE, (error) => {
@@ -20,6 +21,8 @@ export default class Home extends React.Component {
   componentDidMount() {
     Orientation.lockToLandscape()
     playBackgroundMusic()
+    let window = Dimensions.get('window')
+    this.props.setWindowSize(window.width, window.height)
   }
 
   render() {

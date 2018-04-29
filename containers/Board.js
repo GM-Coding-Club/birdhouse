@@ -1,7 +1,7 @@
 
 import { connect } from 'react-redux'
 import { BoardComponent } from '../components/'
-import { addCellRows, setCellColumns } from '../actions'
+import { addCellRows } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -13,9 +13,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    setColumns: (cols) => {
-      dispatch(setCellColumns(cols))
-    },
     addRows: (rows) => {
       dispatch(addCellRows(rows))
     }

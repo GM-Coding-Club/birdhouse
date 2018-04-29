@@ -1,5 +1,5 @@
 
-import { SET_CELL_COLUMNS, ADD_ROWS } from '../actions/'
+import { SET_BOARD_SIZE, ADD_ROWS } from '../actions/'
 
 let initialState = {
   rows: 0,
@@ -11,30 +11,42 @@ var blankCell = () => {
   return {}
 }
 
-var insertRow = (cells, cols) => {
+var newRow = (cols) => {
   var rowArray = []
   for (var i = 0; i < cols; i++) {
     var cell = blankCell()
     rowArray.push(cell)
   }
-  return rowArray.concat(cells) // add to front
+  return rowArray
 }
 
 var insertRows = (cells, rows, cols) => {
-  var newArray = []
-  newArray.concat(cells)
+  var newRowArray = []
+  newRowArray.concat(cells)
   for (var i = 0; i < rows; i++) {
-    newArray = insertRow(newArray, cols)
+    var row = newRow(cols)
+    newRowArray.unshift(row)
   }
-  return newArray
+  return newRowArray
+}
+
+const CELL_WIDTH = 50
+
+var setBoardSize = (state, action) => {
+  //1024x768
+  let numberOfCols = Math.floor(action.width / CELL_WIDTH) // 20
+  let numberOfRows = numberOfCols // 20
+  return Object.assign({}, state, {
+    rows: numberOfRows,
+    cols: numberOfCols,
+    cells: insertRows(state.cells, numberOfRows, numberOfCols)
+  })
 }
 
 const boardReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_CELL_COLUMNS:
-      return Object.assign({}, state, {
-        cols: action.number
-      })
+    case SET_BOARD_SIZE:
+      return setBoardSize(state, action)
     case ADD_ROWS:
       return Object.assign({}, state, {
         rows: state.rows + action.rows,

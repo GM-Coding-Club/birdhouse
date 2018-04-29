@@ -6,12 +6,11 @@ import { View } from 'react-native'
 class BoardItemComponent extends Component {
   render() {
     return (
-      <View style={{ 
-        backgroundColor: "transparent",
-        width: this.props.size,
-        height: this.props.size,
+      <View style={{
+        width: 50,
+        height: 50,
         borderColor: "rgba(0,0,0,0.1)",
-        borderWidth: (this.props.size/100)
+        borderWidth: 1
       }}>
         { this.props.children }
       </View>

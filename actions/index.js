@@ -31,12 +31,13 @@ export function spendCash(amount) {
 
 // BOARD
 
-export const SET_CELL_COLUMNS = 'SET_CELL_COLUMNS'
+export const SET_BOARD_SIZE = 'SET_BOARD_SIZE'
 
-export function setCellColumns(number) {
+export function setBoardSize(width, height) {
   return {
-    type: SET_CELL_COLUMNS,
-    number: (number > 0 ? number : 0)
+    type: SET_BOARD_SIZE,
+    width,
+    height
   }
 }
 
