@@ -33,14 +33,18 @@ var insertRows = (cells, rows, cols) => {
 const CELL_WIDTH = 50
 
 var setBoardSize = (state, action) => {
-  //1024x768
-  let numberOfCols = Math.floor(action.width / CELL_WIDTH) // 20
-  let numberOfRows = numberOfCols // 20
-  return Object.assign({}, state, {
-    rows: numberOfRows,
-    cols: numberOfCols,
-    cells: insertRows(state.cells, numberOfRows, numberOfCols)
-  })
+  if (state.cols !== 0) {
+    return state // can't set board size more than once
+  } else { 
+    //1024x768
+    let numberOfCols = Math.floor(action.width / CELL_WIDTH) // 20
+    let numberOfRows = numberOfCols // 20
+    return Object.assign({}, state, {
+      rows: numberOfRows,
+      cols: numberOfCols,
+      cells: insertRows(state.cells, numberOfRows, numberOfCols)
+    })
+  }
 }
 
 const boardReducer = (state = initialState, action) => {
