@@ -7,7 +7,7 @@ import close from '../img/close_button.png'
 class GuideModalComponent extends Component {
   render() {
     return (
-      <Modal transparent={true} visible={this.props.visible}>
+      <Modal transparent={true} visible={this.props.visible} supportedOrientations={['landscape']}>
         <View style={{
           backgroundColor: "rgba(0, 0, 0, 0.6)",
           width: "100%",
@@ -17,7 +17,9 @@ class GuideModalComponent extends Component {
         }}>
           <View style={{
             width: "50%",
-            height: "50%"
+            height: "50%",
+            minWidth: 400,
+            minHeight: 300
           }}>
             <ImageBackground source={menuBG} style={{ 
               width: "100%", 
