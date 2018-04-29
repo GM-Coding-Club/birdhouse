@@ -1,8 +1,9 @@
 
 import React from 'react'
 import Orientation from 'react-native-orientation'
+import { View } from 'react-native'
 import Sound from 'react-native-sound'
-import { SkyBoxContainer } from '../containers/'
+import { MenuBarContainer, SkyBoxContainer } from '../containers/'
 import Dimensions from 'Dimensions'
 
 var playBackgroundMusic = () => {
@@ -39,7 +40,10 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <SkyBoxContainer/>
+      <View>
+        <MenuBarContainer/>
+        <SkyBoxContainer/>
+      </View>
     )
   }
 }

@@ -1,22 +1,16 @@
 
 import { connect } from 'react-redux'
-import { setBoardSize, spendCash, receiveCash } from '../actions'
+import { setBoardSize } from '../actions'
 import { HomeComponent } from '../components/'
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    cash: state.cash
+  return { 
+    
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    spendCash: (amount) => {
-      dispatch(spendCash(amount))
-    },
-    receiveCash: (amount) => {
-      dispatch(receiveCash(amount))
-    },
     setWindowSize: (width, height) => {
       dispatch(setBoardSize(width, height))
     }
