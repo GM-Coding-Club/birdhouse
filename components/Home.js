@@ -19,15 +19,21 @@ var playBackgroundMusic = () => {
 export default class Home extends React.Component {
 
   componentDidMount() {
+    let initialOrientation = Orientation.getInitialOrientation()
+    if (initialOrientation === 'LANDSCAPE') this._windowIsLandscape()
     Orientation.lockToLandscape()
     Orientation.addOrientationListener(this._orientationDidChange)
     playBackgroundMusic()
   }
 
+  _windowIsLandscape = () => {
+    let window = Dimensions.get('window')
+    this.props.setWindowSize(window.width, window.height)
+  }
+
   _orientationDidChange = (orientation) => {
     if (orientation === 'LANDSCAPE') { // only firing in landscape
-      let window = Dimensions.get('window')
-      this.props.setWindowSize(window.width, window.height)
+      this._windowIsLandscape()
     }
   }
 
