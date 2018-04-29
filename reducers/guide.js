@@ -2,7 +2,7 @@
 import { SHOW_GUIDE, HIDE_GUIDE } from '../actions/'
 
 let initialState = {
-  visible: true,
+  visible: false,
   spottings: []
 }
 
