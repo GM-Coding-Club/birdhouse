@@ -14,6 +14,14 @@ const BirdPosition = {
   FLYING: 1
 }
 
-var Bird = (xPos, yPos, rarity, direction) => {
-
+var Bird = (xPos, yPos, type) => {
+  // create variables here
+  return {
+    id: generatedId,
+    type: BirdType,
+    x: xPos,
+    y: yPos,
+    direction: flyingDirection,
+    position: currentPosition
+  }
 }

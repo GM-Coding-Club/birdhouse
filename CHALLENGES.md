@@ -9,7 +9,15 @@ Clayton found an [issue](https://github.com/GM-Coding-Club/birdhouse/issues/2), 
 
 ## Clayton
 
+### 🛑 Drag and Drop Building
+
+We have a basic store infrastructure now! But our button's are paperweights. Hayden will be working on populating the store with useful items, but in the meantime, you'll need to figure out how to use them. Items should be dragged from the top menu into the grid, and placed when applicable. If the item can be placed, it will glow green, if it can't it will glow red. Some items like bird feeders are simple: they can be hung off of some pipes. They can't be touching the ground, though! Since we are using vertical real estate, our bird feeder towers will get crazy, and go in many directions to maximize space. This means there are a bunch of different sprites for pipes that can be utilized. When you connect a pipe, if the position is valid, the sprites surrouding that pipe should change approprietly. So there are really two parts to the problem: 1) you need to build the UI elements and controls for dragging hovering items 2) you need to develop an infrastructure that understands valid placements within the grid. It's fairly simply to store items within the state, and to update them accoridnly. This one will be fun 😅
+
 ## Hayden
 
+### 🛑 Birds 🦉
+
+We need to implement our birds! In the `img/` folder, you will now see 24 different bird sprites. It's up to you to work with Brady to identify which of these best suit our list of 7 birds. Then we need to finish developing our `models/bird.js` file. Models are a way to programmatically represent information in a standardized format — we recreate all of our information and logic in software form, and use these newly created tools later in our program. Our cloud model `models/cloud.js` is already complete and will offer a lot of assitance. All you need to do is finish our `Bird` method, which returns a literal representation (an object) with paramaters (keys) about a newly generated, flying bird. This method will be called from our bird spawner, which is your next job. It's a simple task 👍
+ 
 ## Kyle 
 
