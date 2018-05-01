@@ -5,6 +5,7 @@ import { View } from 'react-native'
 import Sound from 'react-native-sound'
 import { 
   GuideModalContainer, 
+  SpottedModalContainer,
   MenuBarContainer, 
   SkyBoxContainer 
 } from '../containers/'
@@ -45,6 +46,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <View>
+        <SpottedModalContainer/>
         <GuideModalContainer/>
         <MenuBarContainer/>
         <SkyBoxContainer/>
