@@ -57,7 +57,7 @@ Before you run the app each session, you'll need to launch the Android Emulator 
 4. Download dependencies `npm install`
 
 ### Setup Development Environment
-1. In Android Studio, open Preferences → System Settings → Android SDK
+1. In Android Studio, open Preferences → Appearance & Behavior → System Settings → Android SDK
 2. Copy the Android SDK Location field
 3. In your repo, open the file at `android/local.properties` in a text editor
 4. Paste the SDK Location in place of the placeholder
