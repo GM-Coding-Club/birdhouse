@@ -49,7 +49,8 @@ var cloudAssign = (cloud, distance) => {
   // new x coordinate, i.e. 5000 to 5001
   let newLeft = (cloud.x - distance)
   let newRight = (cloud.x + distance)
-  let newX = isGoingLeft ? newLeft : newRight // YES : NO
+  let isNowGoingLeft = (newDirection === CloudDirection.LEFT)
+  let newX = isNowGoingLeft ? newLeft : newRight // YES : NO
   // updating the cloud
   return Object.assign({}, cloud, {
     direction: newDirection,
