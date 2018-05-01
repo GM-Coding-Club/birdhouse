@@ -5,11 +5,11 @@ import { Provider } from 'react-redux'
 import store from './store.js'
 import { HomeContainer } from './containers/'
 
-import { gameTick } from './actions/'
+import { gameTick } from './logic/'
 
-setInterval(() => { 
+setInterval(() => {
   store.dispatch(gameTick())
-}, 1000/24) 
+}, 1000/24)
 
 export default class App extends Component {
   render() {

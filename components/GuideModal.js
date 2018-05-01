@@ -73,22 +73,3 @@ class GuideModalComponent extends Component {
 }
 
 export default GuideModalComponent
-
-/*
-<View>
-<ImageBackground source={menuBG} style={{ 
-  width: "100%", 
-  height: "100%"
-}} imageStyle={{ 
-  resizeMode:'stretch' 
-}}/>
-</View>
-<View>
-<ImageBackground source={menuBG} style={{ 
-  width: "100%", 
-  height: "100%"
-}} imageStyle={{ 
-  resizeMode:'stretch' 
-}}/>
-</View>
-*/

@@ -27,6 +27,11 @@ export function hideGuide() {
   }
 }
 
+// SPOTTED
+
+// look at the guide actions
+// but consider that we must know what bird we spotted
+
 // CASH
 
 export const RECEIVE_CASH = 'RECEIVE_CASH'

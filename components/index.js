@@ -6,6 +6,7 @@ import HomeComponent from './Home.js'
 import SkyBoxComponent from './SkyBox.js'
 import MenuBarComponent from './MenuBar.js'
 import GuideModalComponent from './GuideModal.js'
+import SpottedModalComponent from './SpottedModal.js'
 
 export {
   BoardComponent,
@@ -14,5 +15,6 @@ export {
   HomeComponent,
   SkyBoxComponent,
   MenuBarComponent,
-  GuideModalComponent
+  GuideModalComponent,
+  SpottedModalComponent
 }
