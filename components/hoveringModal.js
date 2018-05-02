@@ -16,13 +16,13 @@ class HoveringModalComponent extends Component {
           height: "100%"
         }}>
         {
-            this.props.item === undefined ? false : (
-                <BoardItemComponent item={this.props.item} style={{
-                    backgroundColor: this.props.validPlacement ? "rgba (0, 255, 0, 0.3)" : "rgba (255, 0, 0, 0.3)",
-                    left: this.props.x,
-                    top: this.props.y
-                }}/>
-            )
+          this.props.item === undefined ? <View/> : (
+            <BoardItemComponent item={this.props.item} style={{
+                backgroundColor: this.props.validPlacement ? "rgba (0, 255, 0, 0.3)" : "rgba (255, 0, 0, 0.3)",
+                left: this.props.x,
+                top: this.props.y
+            }}/>
+          )
         }
         </View>
       </Modal>

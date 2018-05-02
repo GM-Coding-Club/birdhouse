@@ -7,7 +7,8 @@ import {
   GuideModalContainer, 
   SpottedModalContainer,
   MenuBarContainer, 
-  SkyBoxContainer 
+  SkyBoxContainer,
+  HoveringModalContainer
 } from '../containers/'
 import Dimensions from 'Dimensions'
 
@@ -48,6 +49,7 @@ export default class Home extends React.Component {
       <View>
         <SpottedModalContainer/>
         <GuideModalContainer/>
+        <HoveringModalContainer/>
         <MenuBarContainer/>
         <SkyBoxContainer/>
       </View>
