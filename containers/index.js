@@ -6,6 +6,7 @@ import MenuBarContainer from './MenuBar.js'
 import GuideModalContainer from './GuideModal.js'
 import SpottedModalContainer from './SpottedModal.js'
 import HoveringModalContainer from './HoveringModal.js'
+import BirdHouseModalContainer from './BirdHouseModal.js'
 
 export {
   BoardContainer,
@@ -14,5 +15,6 @@ export {
   MenuBarContainer,
   GuideModalContainer,
   SpottedModalContainer,
-  HoveringModalContainer
+  HoveringModalContainer,
+  BirdHouseModalContainer
 }

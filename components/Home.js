@@ -8,7 +8,8 @@ import {
   SpottedModalContainer,
   MenuBarContainer, 
   SkyBoxContainer,
-  HoveringModalContainer
+  HoveringModalContainer,
+  BirdHouseModalContainer
 } from '../containers/'
 import Dimensions from 'Dimensions'
 
@@ -47,6 +48,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <View>
+        <BirdHouseModalContainer/>
         <SpottedModalContainer/>
         <GuideModalContainer/>
         <HoveringModalContainer/>

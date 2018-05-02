@@ -8,6 +8,7 @@ import MenuBarComponent from './MenuBar.js'
 import GuideModalComponent from './GuideModal.js'
 import SpottedModalComponent from './SpottedModal.js'
 import HoveringModalComponent from './HoveringModal.js'
+import BirdHouseModalComponent from './BirdHouseModal.js'
 
 export {
   BoardComponent,
@@ -18,5 +19,6 @@ export {
   MenuBarComponent,
   GuideModalComponent,
   SpottedModalComponent,
-  HoveringModalComponent
+  HoveringModalComponent,
+  BirdHouseModalComponent
 }

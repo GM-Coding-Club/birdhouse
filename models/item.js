@@ -1,26 +1,27 @@
+
 const ItemType = {
-    EX: 0
+  EX: 0
 }
 
 var getTypePrice = function (type) {
-    switch (type) {
-        case 0:
-            return 10
-            break
-    }
+  switch (type) {
+    case ItemType.EX:
+      return 10
+    default:
+      return 0
+  }
 }
 
 var Item = (type) => {
-    return {
-        type: type,
-        price: getTypePrice
-    }
+  return {
+    type: type,
+    price: getTypePrice(type)
+  }
 }
 
 export {
-    ItemType,
-    getTypePrice,
-    Item
+  ItemType,
+  Item
 }
 
 export default Item

@@ -1,12 +1,13 @@
+
 var Cell = (item) => {
-    return {
-        item: item,
-        hovered: false
-    }
+  return {
+    item: item,
+    hovered: false
+  }
 }
 
 export {
-    Cell
+  Cell
 }
 
 export default Cell

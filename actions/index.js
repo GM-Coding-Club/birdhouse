@@ -32,6 +32,25 @@ export function hideGuide() {
 // look at the guide actions
 // but consider that we must know what bird we spotted
 
+// BIRDHOUSE
+
+export const SHOW_BIRDHOUSE = 'SHOW_BIRDHOUSE'
+
+export function showBirdhouse(location) {
+  return {
+    type: SHOW_BIRDHOUSE,
+    location
+  }
+}
+
+export const HIDE_BIRDHOUSE = 'HIDE_BIRDHOUSE'
+
+export function hideBirdhouse() {
+  return {
+    type: HIDE_BIRDHOUSE
+  }
+}
+
 // CASH
 
 export const RECEIVE_CASH = 'RECEIVE_CASH'
