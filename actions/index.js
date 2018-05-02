@@ -127,3 +127,46 @@ export function moveCloud(id, value) {
 // hide bird
 
 // show bird
+
+//item enable
+export const ITEM_ENABLE = 'ITEM_ENABLE'
+
+export function enableItem(itemType){
+  return {
+    type: ITEM_ENABLE,
+    itemType
+    
+  }
+}
+
+//start dragging
+
+export const ITEM_START_DRAGGING = 'ITEM_START_DRAGGING'
+
+export function draggingItem(itemType){
+  return{
+    type: ITEM_START_DRAGGING,
+    itemType
+  }
+}
+
+//purchase
+export const ITEM_PURCHASE = 'ITEM_PURCHASE'
+
+export function purchaseItem(itemType){
+  return{
+    type: ITEM_PURCHASE,
+    itemType
+  }
+}
+
+
+//item disable
+export const ITEM_DISABLE = 'ITEM_DISABLE'
+
+export function disableItem(itemType){
+  return{
+    type: ITEM_DISABLE,
+    itemType
+  }
+}
