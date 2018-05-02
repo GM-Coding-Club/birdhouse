@@ -1,5 +1,5 @@
-
 import { SET_BOARD_SIZE, ADD_ROWS } from '../actions/'
+import { Cell } from '../models'
 
 let initialState = {
   rows: 0,
@@ -7,14 +7,10 @@ let initialState = {
   cells: []
 }
 
-var blankCell = () => {
-  return {}
-}
-
 var newRow = (cols) => {
   var rowArray = []
   for (var i = 0; i < cols; i++) {
-    var cell = blankCell()
+    var cell = Cell()
     rowArray.push(cell)
   }
   return rowArray
