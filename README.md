@@ -4,8 +4,11 @@
 
 # Contributors
 ## <new line for each name>
-## Kyle Wodehouse
+## Kyle
 ## Spicy Dan
+## Hayden
+## Brady
+## Ted
 With assistance from Daniel Sinclair 
 
 # Necessary Development/Testing Tools
