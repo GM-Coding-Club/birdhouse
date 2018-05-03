@@ -4,6 +4,8 @@
 
 # Contributors
 ## <new line for each name>
+##Kyle Wodehouse
+##Spicy Dan
 With assistance from Daniel Sinclair 
 
 # Necessary Development/Testing Tools
