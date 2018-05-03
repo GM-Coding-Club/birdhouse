@@ -1,7 +1,9 @@
 
 import { RECEIVE_CASH, SPEND_CASH } from '../actions/'
 
-let initialState = 0
+export const DEFAULT_CASH = 100
+
+let initialState = DEFAULT_CASH
 
 const cashReducer = (state = initialState, action) => {
   switch (action.type) {

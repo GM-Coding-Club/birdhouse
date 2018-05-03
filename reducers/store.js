@@ -1,7 +1,27 @@
 
 import { } from '../actions/'
+import { Item, ItemType } from '../models/'
+import { DEFAULT_CASH } from '../reducers/cash.js'
 
-let initialState = []
+var itemWrapper = (item) => {
+  return {
+    enabled: (item.price <= DEFAULT_CASH ? true : false),
+    item
+  }
+}
+
+let initialState = [
+  itemWrapper(Item(ItemType.STAKE)),
+  itemWrapper(Item(ItemType.POLE)),
+  itemWrapper(Item(ItemType.BIRDHOUSE)),
+  itemWrapper(Item(ItemType.FEEDER)),
+  itemWrapper(Item(ItemType.BIRDBATH)),
+  itemWrapper(Item(ItemType.FLOWERS)),
+  itemWrapper(Item(ItemType.SEEDS)),
+  itemWrapper(Item(ItemType.NUTS)),
+  itemWrapper(Item(ItemType.WORMS)),
+  itemWrapper(Item(ItemType.FRUIT))
+]
 
 const storeReducer = (state = initialState, action) => {
   switch (action.type) {

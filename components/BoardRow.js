@@ -7,8 +7,7 @@ class BoardRowComponent extends Component {
   render() {
     return (
       <View style={{
-        flex: 1,
-        alignSelf: 'flex-start'
+        flex: 1
       }}>
         {
           this.props.row.map((col, colIndex) =>

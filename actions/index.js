@@ -128,44 +128,49 @@ export function moveCloud(id, value) {
 
 // show bird
 
-//item enable
-export const ITEM_ENABLE = 'ITEM_ENABLE'
+// STORE
 
-export function enableItem(itemType){
+export const ITEM_DRAGGING = 'ITEM_DRAGGING'
+
+export function draggingItem(itemType, x, y) {
   return {
-    type: ITEM_ENABLE,
-    itemType
-    
+    type: ITEM_DRAGGING,
+    itemType,
+    x,
+    y
   }
 }
 
-//start dragging
+export const ITEM_DROP = 'ITEM_DROP'
 
-export const ITEM_START_DRAGGING = 'ITEM_START_DRAGGING'
-
-export function draggingItem(itemType){
-  return{
-    type: ITEM_START_DRAGGING,
-    itemType
+export function droppingItem() {
+  return {
+    type: ITEM_DROP
   }
 }
 
-//purchase
 export const ITEM_PURCHASE = 'ITEM_PURCHASE'
 
-export function purchaseItem(itemType){
-  return{
+export function purchaseItem(itemType) {
+  return {
     type: ITEM_PURCHASE,
     itemType
   }
 }
 
+export const ITEM_ENABLE = 'ITEM_ENABLE'
 
-//item disable
+export function enableItem(itemType) {
+  return {
+    type: ITEM_ENABLE,
+    itemType
+  }
+}
+
 export const ITEM_DISABLE = 'ITEM_DISABLE'
 
-export function disableItem(itemType){
-  return{
+export function disableItem(itemType) {
+  return {
     type: ITEM_DISABLE,
     itemType
   }

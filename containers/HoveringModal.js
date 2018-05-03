@@ -4,13 +4,11 @@ import { HoveringModalComponent } from '../components/'
 import { } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-  }
+  return state.hovering
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-  }
+  return { }
 }
 
 const HoveringModalContainer = connect(

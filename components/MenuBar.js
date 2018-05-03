@@ -43,8 +43,11 @@ class MenuBarComponent extends Component {
             justifyContent: "space-around"
           }}>
             {
-              this.props.store.map((item, index) =>
-                <MenuTileComponent {...item} key={index} style={{ width: 50, height: 50 }}/>
+              this.props.store.map((wrapper, index) =>
+                <MenuTileComponent {...wrapper} key={index} 
+                  style={{ width: 50, height: 50 }} 
+                  draggingItem={this.props.draggingItem} 
+                  droppingItem={this.props.droppingItem}/>
               )
             }
           </View>

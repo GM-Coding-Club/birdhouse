@@ -8,6 +8,7 @@ import store from './store.js'
 import guide from './guide.js'
 import spotted from './spotted.js'
 import birdhouse from './birdhouse.js'
+import hovering from './hovering.js'
 
 const rootReducer = combineReducers({
   birds,
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   store,
   guide,
   spotted,
-  birdhouse
+  birdhouse,
+  hovering
 })
 
 export default rootReducer
