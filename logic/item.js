@@ -4,7 +4,8 @@ import {
   draggingItem, 
   droppingItem, 
   setBoardItem, 
-  setBoardHover
+  setBoardHover,
+  spendCash
 } from '../actions/'
 import { CELL_WIDTH } from '../reducers/board.js'
 
@@ -21,13 +22,20 @@ var coordToCell = (state, x, y) => {
   }
 }
 
+var canDropItem = (itemType, row, col) => {
+  return false
+}
+
 export function dropItem(itemType, x, y) {
   return (dispatch, getState) => {
     let cell = coordToCell(getState(), x, y)
     dispatch(droppingItem(itemType, x, y))
-    //dispatch(setBoardHover(true, cell.row, cell.col))
     dispatch(setBoardHover(false, 0, 0)) // all false
-    dispatch(setBoardItem(itemType, cell.row, cell.col))
+    if (canDropItem(itemType, cell.row, cell.col)) {
+      let price = Item(itemType).price
+      dispatch(spendCash(price))
+      dispatch(setBoardItem(itemType, cell.row, cell.col))
+    }
     return Promise.resolve()
   }
 }

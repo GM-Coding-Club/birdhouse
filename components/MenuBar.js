@@ -57,7 +57,7 @@ class MenuBarComponent extends Component {
             <MenuTileComponent style={{ 
               width: 50, 
               height: 50 
-            }} gray={true} emblem={robin} onPress={this.props.showGuide}/>
+            }} gray={true} emblem={robin} enabled={true} onPress={this.props.showGuide}/>
           </View>
         </View>
       </View>

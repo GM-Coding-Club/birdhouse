@@ -44,7 +44,7 @@ var getEmblem = (item) => {
 
 class MenuTileComponent extends Component {
   componentWillMount() {
-    if (!this.props.gray) {
+    if (!this.props.gray && this.props.enabled) {
       this._panResponder = PanResponder.create({
         onMoveShouldSetResponderCapture: () => true,
         onMoveShouldSetPanResponderCapture: () => true,
@@ -79,7 +79,10 @@ class MenuTileComponent extends Component {
 
   render() {
     return (
-      <View style={this.props.style} {...this._panResponder.panHandlers}>
+      <View style={{
+        opacity: this.props.enabled ? 1 : 0.3,
+        ...this.props.style
+      }} {...this._panResponder.panHandlers}>
         <TouchableHighlight onPress={this.props.onPress}>
           <ImageBackground source={this.props.gray ? grayTile : brownTile} style={{ 
             width: "100%", 
