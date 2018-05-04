@@ -1,4 +1,6 @@
 
+import robin from '../img/bird_10_26x26.png'
+
 const ItemType = {
   STAKE: 0,
   POLE: 1,
@@ -12,7 +14,7 @@ const ItemType = {
   FRUIT: 9
 }
 
-var getTypePrice = function (type) {
+var ItemPrice = (type) => {
   switch (type) {
     case ItemType.STAKE:
       return 100
@@ -39,14 +41,35 @@ var getTypePrice = function (type) {
   }
 }
 
+var ItemSprite = (type) => {
+  switch (type) {
+    case ItemType.STAKE:
+      return robin
+    case ItemType.POLE:
+      return robin
+    case ItemType.BIRDHOUSE:
+      return robin
+    case ItemType.FEEDER:
+      return robin
+    case ItemType.BIRDBATH:
+      return robin
+    case ItemType.FLOWERS:
+      return robin
+    default:
+      return robin
+  }
+}
+
 var Item = (type) => {
   return {
     type: type,
-    price: getTypePrice(type)
+    price: ItemPrice(type)
   }
 }
 
 export {
+  ItemSprite,
+  ItemPrice,
   ItemType,
   Item
 }

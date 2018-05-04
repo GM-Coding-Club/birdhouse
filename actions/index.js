@@ -29,8 +29,14 @@ export function hideGuide() {
 
 // SPOTTED
 
-// look at the guide actions
-// but consider that we must know what bird we spotted
+export const SPOTTED_BIRD = 'SPOTTED_BIRD'
+
+export function spottedBird(birdType) {
+  return {
+    type: SPOTTED_BIRD,
+    birdType
+  }
+}
 
 // BIRDHOUSE
 
