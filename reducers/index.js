@@ -9,6 +9,7 @@ import guide from './guide.js'
 import spotted from './spotted.js'
 import birdhouse from './birdhouse.js'
 import hovering from './hovering.js'
+import window from './window.js'
 
 const rootReducer = combineReducers({
   birds,
@@ -19,7 +20,8 @@ const rootReducer = combineReducers({
   guide,
   spotted,
   birdhouse,
-  hovering
+  hovering,
+  window
 })
 
 export default rootReducer

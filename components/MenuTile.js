@@ -58,6 +58,9 @@ class MenuTileComponent extends Component {
           let y = event.nativeEvent.pageY
           this.props.draggingItem(this.props.item.type, x, y)
         },
+        onPanResponderTerminate: (event, gestureState) => {
+          this.props.droppingItem()
+        },
         onPanResponderRelease: (event, gestureState) => {
           this.props.droppingItem()
         }

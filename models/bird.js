@@ -22,7 +22,7 @@ const BirdDirection = {
 var Bird = (xPos, yPos, type) => {
   let generatedId = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
   var flyingDirection = undefined
-  if (xPos < 0) let flyingDirection = BirdDirection.RIGHT
+  if (xPos < 0) flyingDirection = BirdDirection.RIGHT
   else flyingDirection = BirdDirection.LEFT
   let currentPosition = BirdPosition.FLYING
   return {
@@ -31,6 +31,14 @@ var Bird = (xPos, yPos, type) => {
     x: xPos,
     y: yPos,
     direction: flyingDirection,
-    position: currentPosition
+    position: currentPosition,
+    visible: true
   }
+}
+
+export {
+  BirdType,
+  BirdPosition,
+  BirdDirection,
+  Bird
 }

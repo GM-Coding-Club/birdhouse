@@ -4,8 +4,7 @@ import { Provider } from 'react-redux'
 
 import store from './store.js'
 import { HomeContainer } from './containers/'
-
-import { gameTick } from './logic/'
+import gameTick from './logic/'
 
 setInterval(() => {
   store.dispatch(gameTick())

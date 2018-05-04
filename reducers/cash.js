@@ -1,7 +1,7 @@
 
 import { RECEIVE_CASH, SPEND_CASH } from '../actions/'
 
-export const DEFAULT_CASH = 100
+export const DEFAULT_CASH = 1000
 
 let initialState = DEFAULT_CASH
 

@@ -116,17 +116,52 @@ export function moveCloud(id, value) {
 
 // BIRD
 
-// spawn bird (row)
+export const SPAWN_BIRD = 'SPAWN_BIRD'
 
-// move bird, horizontal
+export function spawnBird(birdType, x, y) {
+  return {
+    type: SPAWN_BIRD,
+    birdType,
+    x,
+    y
+  }
+}
 
-// stop bird
+export const STOP_BIRD = 'STOP_BIRD'
 
-// start bird
+export function stopBird(id) {
+  return {
+    type: STOP_BIRD,
+    id
+  }
+}
 
-// hide bird
+export const START_BIRD = 'START_BIRD'
 
-// show bird
+export function startBird(id) {
+  return {
+    type: START_BIRD,
+    id
+  }
+}
+
+export const HIDE_BIRD = 'HIDE_BIRD'
+
+export function hideBird(id) {
+  return {
+    type: HIDE_BIRD,
+    id
+  }
+}
+
+export const SHOW_BIRD = 'SHOW_BIRD'
+
+export function showBird(id) {
+  return {
+    type: SHOW_BIRD,
+    id
+  }
+}
 
 // STORE
 

@@ -4,6 +4,7 @@ import { Image, ScrollView, View } from 'react-native'
 import { BoardContainer } from '../containers/'
 import grass from '../img/grass_bg.jpg'
 import CloudComponent from './Cloud.js'
+import BirdComponent from './Bird.js'
 
 class SkyBoxComponent extends Component {
   render() {
@@ -26,7 +27,12 @@ class SkyBoxComponent extends Component {
         }}/>
         { 
           this.props.clouds.map((cloud, index) => {
-            return <CloudComponent key={cloud.id} type={cloud.type} x={cloud.x} y={cloud.y}/>
+            return <CloudComponent key={cloud.id} {...cloud}/>
+          })
+        }
+        { 
+          this.props.birds.map((bird, index) => {
+            return <BirdComponent key={bird.id} {...bird}/>
           })
         }
       </ScrollView>
