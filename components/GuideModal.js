@@ -33,6 +33,9 @@ class GuideModalComponent extends Component {
             <ImageBackground source={menuBG} style={{ 
               width: "100%", 
               height: "100%",
+              overflow: "hidden",
+              paddingTop: 20,
+              paddingBottom: 20
             }} imageStyle={{ 
               resizeMode: 'stretch' 
             }}>
@@ -49,13 +52,12 @@ class GuideModalComponent extends Component {
                 width: "80%",
                 flex: 1, 
                 alignSelf: 'flex-start', 
-                flexDirection: 'column',
-                paddingTop: "12%"
+                flexDirection: 'column'
               }}>
                 {
                   this.props.spottings.length > 0 ? 
                     this.props.spottings.map((spotting, index) =>
-                      <GuideCellComponent {...spotting} key={index}/>
+                      <GuideCellComponent spotting={spotting} key={index}/>
                     ) : 
                     <Text style={{
                       fontSize: 40,

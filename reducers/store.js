@@ -10,12 +10,11 @@ var itemWrapper = (item) => {
 }
 
 let initialState = [
-  itemWrapper(Item(ItemType.STAKE)),
   itemWrapper(Item(ItemType.POLE)),
   itemWrapper(Item(ItemType.BIRDHOUSE)),
   itemWrapper(Item(ItemType.FEEDER)),
   itemWrapper(Item(ItemType.BIRDBATH)),
-  itemWrapper(Item(ItemType.FLOWERS)),
+  itemWrapper(Item(ItemType.SUNFLOWER)),
   itemWrapper(Item(ItemType.SEEDS)),
   itemWrapper(Item(ItemType.NUTS)),
   itemWrapper(Item(ItemType.WORMS)),

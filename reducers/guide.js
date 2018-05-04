@@ -19,7 +19,10 @@ var hideGuide = (state, action) => {
 }
 
 var spottedBird = (state, action) => {
-  return state
+  return Object.assign({}, state, {
+    spottings: (state.spottings.includes(action.birdType) ?
+      state.spottings : state.spottings.concat(action.birdType))
+  })
 }
 
 const guideReducer = (state = initialState, action) => {

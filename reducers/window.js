@@ -9,7 +9,6 @@ var setWindowSize = (state, action) => {
 }
 
 var setScrollOffset = (state, action) => {
-  console.log(action.offset)
   return Object.assign({}, state, {
     scrollOffset: action.offset
   })

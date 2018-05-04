@@ -8,39 +8,10 @@ import {
   View,
   Animated
 } from 'react-native'
-import { ItemType } from '../models/'
+import { ItemType, ItemSprite } from '../models/'
 
 import brownTile from '../img/brown_tile.png'
 import grayTile from '../img/gray_tile.png'
-import robin from '../img/bird_10_26x26.png'
-
-var getEmblem = (item) => {
-  if (!item) return undefined
-  switch (item.type) {
-    case ItemType.STAKE:
-      return robin
-    case ItemType.POLE:
-      return robin
-    case ItemType.BIRDHOUSE:
-      return robin
-    case ItemType.FEEDER:
-      return robin
-    case ItemType.BIRDBATH:
-      return robin
-    case ItemType.FLOWERS:
-      return robin
-    case ItemType.SEEDS:
-      return robin
-    case ItemType.NUTS:
-      return robin
-    case ItemType.WORMS:
-      return robin
-    case ItemType.FRUIT:
-      return robin
-    default:
-      return robin
-  }
-}
 
 class MenuTileComponent extends Component {
   componentWillMount() {
@@ -90,7 +61,7 @@ class MenuTileComponent extends Component {
           }} imageStyle={{ 
             resizeMode:'stretch' 
           }}>
-            <Image source={this.props.emblem ? this.props.emblem : getEmblem(this.props.item)} style={{
+            <Image source={this.props.emblem ? this.props.emblem : ItemSprite(this.props.item.type)} style={{
               left: "20%",
               top: "16%",
               width: "60%",

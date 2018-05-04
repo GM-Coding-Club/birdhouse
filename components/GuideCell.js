@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { Text, Image, View } from 'react-native'
+import { BirdSprite, BirdDescription, BirdPosition } from '../models/'
 
 class GuideCellComponent extends Component {
   render() {
@@ -23,22 +24,23 @@ class GuideCellComponent extends Component {
             width: 60,
             height: 60
           }}>
-            <Image source={this.props.emblem} style={{
+            <Image source={BirdSprite(this.props.spotting, BirdPosition.STATIONARY)} style={{
               left: "10%",
               top: "10%",
               width: "80%",
-              height: "80%"
-            }}/>
+              height: "80%",
+            }} resizeMode='contain'/>
           </View>
         </View>
         <View style={{
-          width: "70%"
+          width: "70%",
+          paddingRight: 20
         }}>
           <Text style={{
             fontSize: 20,
             fontWeight: 'bold',
             color: 'white'
-          }}>{this.props.description}</Text>
+          }}>{BirdDescription(this.props.spotting)}</Text>
         </View>
       </View>
     )

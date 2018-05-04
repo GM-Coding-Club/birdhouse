@@ -93,11 +93,33 @@ var BirdSize = (type, position) => {
   }
 }
 
+var BirdDescription = (type) => {
+  switch (type) {
+    case BirdType.BlackLeggedKittiwake:
+      return "A small bird, with a white body and gray, black-tipped wings. Also, it has black legs. They like to eat fish. It is the only gall that dives and swims underwater. After they give birth the parents take turns hunting and then bring back food with them. They store the food in their crop, a pouch near their throat."
+    case BirdType.AmericanRobin:
+      return "They have warm orange bellies, cheery songs, gray backs, and black heads. They like to eat worms and berries. They actually eat more worms in the morning and more berries in the afternoon."
+    case BirdType.BlueJay:
+      return "Blue Jays are very common song birds. They are large with blue, black and white feathers. They have noisy calls. They are known for intelligence and tight family bonds. They like peanuts and sunflower seeds, and often take drinks from bird baths."
+    case BirdType.BlackCappedChickadee:
+      return "They are known for their bid round head, tiny body, and curiosity about everything. They have black heads and chins, white cheeks and underside, and a gray back, wings and tail. It is usually one of the first birds people see after setting up a bird feeder. They like sunflowers and peanuts. They also like willow, alder and birch trees."
+    case BirdType.Goldfinch:
+      return "They have yellow bodies and heads with black wings, tail and top of head. They like to eat sunflower, nyjer, and milkweed. They are the state bird of New Jersey, Iowa, and Washington."
+    case BirdType.Cardinal:
+      return "Males are red with black face, while females are brown with a black face. They like sunflower seeds a lot, but will eat most bird foods. The female birds are one of the few songbirds that sing."
+    case BirdType.BaltimoreOriole:
+      return "They have a beautiful whistling song. They have orange and yellow bellies and black heads and backs. They love eating fruit, nectar, and insects. They are attracted to ripe fruits and like fruit trees."
+    default:
+      return ""
+  }
+}
+
 export {
   BirdSprite,
   BirdSize,
   BirdType,
   BirdPosition,
   BirdDirection,
+  BirdDescription,
   Bird
 }

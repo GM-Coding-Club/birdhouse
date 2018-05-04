@@ -11,6 +11,7 @@ var itemSprite = (item) => {
 }
 
 class BoardItemComponent extends Component {
+
   render() {
     return (
       <View style={{
