@@ -7,7 +7,7 @@ import { CELL_WIDTH } from '../reducers/board.js'
 
 var itemSprite = (item) => {
   if (!item) return undefined
-  else ItemSprite(item.type)
+  else return ItemSprite(item.type)
 }
 
 class BoardItemComponent extends Component {

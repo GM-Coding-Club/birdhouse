@@ -1,5 +1,5 @@
 
-import { Item, ItemType } from '../models/'
+import { Item, ItemType, ItemPrice } from '../models/'
 import { 
   draggingItem, 
   droppingItem, 
@@ -22,19 +22,30 @@ var coordToCell = (state, x, y) => {
   }
 }
 
-var canDropItem = (itemType, row, col) => {
-  return false
+var canDropItem = (state, itemType, row, col) => {
+  for (let row of state.board.cells) {
+    for (let cell of row) {
+      if (cell.item !== undefined) {
+        console.log("full")
+        return false
+      } else {
+        console.log("set item")
+        return true
+      }
+    }
+  }
+  return true
 }
 
 export function dropItem(itemType, x, y) {
   return (dispatch, getState) => {
     let cell = coordToCell(getState(), x, y)
     dispatch(droppingItem(itemType, x, y))
-    dispatch(setBoardHover(false, 0, 0)) // all false
-    if (canDropItem(itemType, cell.row, cell.col)) {
-      let price = Item(itemType).price
-      dispatch(spendCash(price))
-      dispatch(setBoardItem(itemType, cell.row, cell.col))
+    //dispatch(setBoardHover(false, 0, 0)) // all false
+    if (canDropItem(getState(), itemType, cell.row, cell.col)) {
+      let item = Item(itemType)
+      dispatch(spendCash(item.price))
+      dispatch(setBoardItem(item, cell.row, cell.col))
     }
     return Promise.resolve()
   }

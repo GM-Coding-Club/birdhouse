@@ -14,6 +14,16 @@ export default function gameTick() {
   return (dispatch, getState) => {
     dispatch(staticGameTick()) // static action
     dispatch(spawnBirds())
+
+    let cells = getState().board.cells
+    for (let row of cells) {
+      for (let cell of row) {
+        if (cell.item !== undefined) {
+          console.log(cell)
+        }
+      }
+    }
+    
     return Promise.resolve()
   }
 }
