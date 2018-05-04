@@ -1,5 +1,5 @@
 
-import { SET_BOARD_SIZE } from '../actions/'
+import { SET_BOARD_SIZE, SET_SCROLL_OFFSET } from '../actions/'
 
 var setWindowSize = (state, action) => {
   return Object.assign({}, state, {
@@ -8,15 +8,25 @@ var setWindowSize = (state, action) => {
   })
 }
 
+var setScrollOffset = (state, action) => {
+  console.log(action.offset)
+  return Object.assign({}, state, {
+    scrollOffset: action.offset
+  })
+}
+
 const initialState = {
   width: 0,
-  height: 0
+  height: 0,
+  scrollOffset: 0
 }
 
 const boardReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_BOARD_SIZE:
       return setWindowSize(state, action)
+    case SET_SCROLL_OFFSET:
+      return setScrollOffset(state, action)
     default:
       return state
   }

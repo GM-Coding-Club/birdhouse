@@ -1,5 +1,11 @@
 
-import { SET_BOARD_SIZE, ADD_ROWS } from '../actions/'
+import { 
+  SET_BOARD_SIZE, 
+  ADD_ROWS, 
+  ITEM_DROP, 
+  SET_BOARD_ITEM, 
+  SET_BOARD_HOVER
+} from '../actions/'
 import { Cell } from '../models'
 
 let initialState = {
@@ -27,7 +33,7 @@ var insertRows = (cells, rows, cols) => {
   return newRowArray
 }
 
-const CELL_WIDTH = 50
+export const CELL_WIDTH = 50
 
 var setBoardSize = (state, action) => {
   if (state.cols !== 0) {
@@ -44,15 +50,47 @@ var setBoardSize = (state, action) => {
   }
 }
 
+var addRows = (state, action) => {
+  return Object.assign({}, state, {
+    rows: state.rows + action.rows,
+    cells: insertRows(state.cells, action.rows, state.cols)
+  })
+}
+
+var setBoardItem = (state, action) => {
+  return Object.assign({}, state, {
+    cells: state.cells.map((rowObj, row) => {
+      return rowObj.map((obj, col) => {
+        return Object.assign({}, obj, {
+          item: (row === action.x && col === action.y) ? action.item : obj.item
+        })
+      })
+    })
+  })
+}
+
+var setBoardHover = (state, action) => {
+  return Object.assign({}, state, {
+    cells: state.cells.map((rowObj, row) => {
+      return rowObj.map((obj, col) => {
+        return Object.assign({}, obj, {
+          hovered: (row === action.x && col === action.y) ? action.hovered : false
+        })
+      })
+    })
+  })
+}
+
 const boardReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_BOARD_SIZE:
       return setBoardSize(state, action)
     case ADD_ROWS:
-      return Object.assign({}, state, {
-        rows: state.rows + action.rows,
-        cells: insertRows(state.cells, action.rows, state.cols)
-      })
+      return addRows(state, action)
+    case SET_BOARD_ITEM:
+      return setBoardItem(state, action)
+    case SET_BOARD_HOVER:
+      return setBoardHover(state, action)
     default:
       return state
   }

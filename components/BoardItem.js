@@ -7,8 +7,9 @@ import robin from '../img/bird_10_26x26.png'
 
 export const ITEM_SIZE = 50
 
-var getEmblem = (itemType) => {
-  if (itemType === undefined) return undefined
+var getEmblem = (item) => {
+  if (item === undefined) return undefined
+  let itemType = item.type
   switch (itemType) {
     case ItemType.STAKE:
       return robin
@@ -35,9 +36,10 @@ class BoardItemComponent extends Component {
         height: ITEM_SIZE,
         borderColor: "rgba(0,0,0,0.1)",
         borderWidth: 1,
+        backgroundColor: this.props.hovered ? "rgba(0,0,0,0.3)" : "transparent",
         ...this.props.style
       }}>
-        <Image source={getEmblem(this.props.itemType)} style={{
+        <Image source={getEmblem(this.props.item)} style={{
           left: "20%",
           top: "16%",
           width: "60%",

@@ -92,6 +92,37 @@ export function addCellRows(rows) {
   }
 }
 
+export const SET_BOARD_ITEM = 'SET_BOARD_ITEM'
+
+export function setBoardItem(item, x, y) {
+  return {
+    type: SET_BOARD_ITEM,
+    item,
+    x,
+    y
+  }
+}
+
+export const SET_BOARD_HOVER = 'SET_BOARD_HOVER'
+
+export function setBoardHover(hovered, x, y) {
+  return {
+    type: SET_BOARD_HOVER,
+    hovered, 
+    x,
+    y
+  }
+}
+
+export const SET_SCROLL_OFFSET = 'SET_SCROLL_OFFSET'
+
+export function setScrollOffset(offset) {
+  return {
+    type: SET_SCROLL_OFFSET,
+    offset
+  }
+}
+
 // CLOUD
 
 export const SPAWN_CLOUD = 'SPAWN_CLOUD'
@@ -178,9 +209,12 @@ export function draggingItem(itemType, x, y) {
 
 export const ITEM_DROP = 'ITEM_DROP'
 
-export function droppingItem() {
+export function droppingItem(itemType, x, y) {
   return {
-    type: ITEM_DROP
+    type: ITEM_DROP,
+    itemType,
+    x,
+    y
   }
 }
 

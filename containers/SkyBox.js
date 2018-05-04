@@ -1,6 +1,7 @@
 
 import { connect } from 'react-redux'
 import { SkyBoxComponent } from '../components/'
+import { setScrollOffset } from '../actions/'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,7 +11,11 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {}
+  return {
+    setScrollOffset: (offset) => {
+      dispatch(setScrollOffset(offset))
+    },
+  }
 }
 
 const SkyBoxContainer = connect(

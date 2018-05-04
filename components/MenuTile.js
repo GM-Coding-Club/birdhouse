@@ -51,18 +51,22 @@ class MenuTileComponent extends Component {
         onPanResponderGrant: (event, gestureState) => {
           let x = event.nativeEvent.pageX
           let y = event.nativeEvent.pageY
-          this.props.draggingItem(this.props.item.type, x, y)
+          this.props.dragItem(this.props.item.type, x, y)
         },
         onPanResponderMove: (event, gestureState) => {
           let x = event.nativeEvent.pageX
           let y = event.nativeEvent.pageY
-          this.props.draggingItem(this.props.item.type, x, y)
+          this.props.dragItem(this.props.item.type, x, y)
         },
         onPanResponderTerminate: (event, gestureState) => {
-          this.props.droppingItem()
+          let x = event.nativeEvent.pageX
+          let y = event.nativeEvent.pageY
+          this.props.dropItem(this.props.item.type, x, y)
         },
         onPanResponderRelease: (event, gestureState) => {
-          this.props.droppingItem()
+          let x = event.nativeEvent.pageX
+          let y = event.nativeEvent.pageY
+          this.props.dropItem(this.props.item.type, x, y)
         }
       })
     } else {

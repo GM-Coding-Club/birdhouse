@@ -17,7 +17,9 @@ class HoveringModalComponent extends Component {
         }}>
         {
           this.props.itemType === undefined ? <View/> : (
-            <BoardItemComponent itemType={this.props.itemType} style={{
+            <BoardItemComponent item={{ 
+              type: this.props.itemType 
+            }} style={{
               zIndex: 1000,
               left: this.props.x,
               top: this.props.y,

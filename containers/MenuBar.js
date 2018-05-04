@@ -1,7 +1,8 @@
 
 import { connect } from 'react-redux'
 import { MenuBarComponent } from '../components/'
-import { showGuide, draggingItem, droppingItem } from '../actions'
+import { showGuide } from '../actions'
+import { dropItem, dragItem } from '../logic/' 
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -15,11 +16,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     showGuide: () => {
       dispatch(showGuide())
     },
-    draggingItem: (itemType, x, y) => {
-      dispatch(draggingItem(itemType, x, y))
+    dragItem: (itemType, x, y) => {
+      dispatch(dragItem(itemType, x, y))
     },
-    droppingItem: () => {
-      dispatch(droppingItem())
+    dropItem: (itemType, x, y) => {
+      dispatch(dropItem(itemType, x, y))
     }
   }
 }

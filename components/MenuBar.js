@@ -2,8 +2,6 @@
 import React, { Component } from 'react'
 import { Text, Image, View } from 'react-native'
 import MenuTileComponent from './MenuTile.js'
-//import menuBg from '../img/menu_bg.png'
-// <Image source={menuBg} style={{ width: "100%", height: "100%", resizeMode: "stretch" }}/>
 import robin from '../img/bird_10_26x26.png'
 
 class MenuBarComponent extends Component {
@@ -46,8 +44,8 @@ class MenuBarComponent extends Component {
               this.props.store.map((wrapper, index) =>
                 <MenuTileComponent {...wrapper} key={index} 
                   style={{ width: 50, height: 50 }} 
-                  draggingItem={this.props.draggingItem} 
-                  droppingItem={this.props.droppingItem}/>
+                  dragItem={this.props.dragItem} 
+                  dropItem={this.props.dropItem}/>
               )
             }
           </View>

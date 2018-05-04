@@ -16,6 +16,8 @@ class SkyBoxComponent extends Component {
         y: 0
       }} ref={(ref) => { 
         this.scrollView = ref
+      }} onScroll={(event) => {
+        this.props.setScrollOffset(event.nativeEvent.contentOffset.y)
       }}>
         <BoardContainer/>
         <Image source={grass} style={{
