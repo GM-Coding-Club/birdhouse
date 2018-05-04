@@ -2,7 +2,7 @@
 import { CloudSprite, Cloud, CloudType, CloudDirection } from './cloud.js'
 import { Cell } from './cell.js'
 import { ItemDescription, ItemType, Item, ItemSprite, ItemPrice } from './item.js'
-import { Bird, BirdSprite, BirdType, BirdPosition, BirdDirection, BirdDescription, BirdSize } from './bird.js'
+import { Bird, BirdRareness, BirdSprite, BirdType, BirdPosition, BirdDirection, BirdDescription, BirdSize } from './bird.js'
 
 export {
   Cloud, 
@@ -20,5 +20,6 @@ export {
   BirdPosition,
   BirdDirection,
   BirdSprite,
-  BirdDescription
+  BirdDescription,
+  BirdRareness
 }

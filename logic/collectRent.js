@@ -9,7 +9,7 @@ export default function collectRent() {
     for (row of cells) {
       for (cell of row) {
         if (cell.item && cell.item.type === ItemType.BIRDHOUSE) {
-          rent += cell.item.birds.length
+          rent += cell.item.birds ? cell.items.bird.length : 0
         }
       }
     }

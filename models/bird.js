@@ -114,6 +114,27 @@ var BirdDescription = (type) => {
   }
 }
 
+var BirdRareness = (type, position) => {
+  switch (type) {
+    case BirdType.BlackLeggedKittiwake:
+        return 1
+    case BirdType.AmericanRobin:
+      return 15
+    case BirdType.BlueJay:
+      return 15
+    case BirdType.BlackCappedChickadee:
+      return 44
+    case BirdType.Goldfinch:
+      return 10
+    case BirdType.Cardinal:
+      return 10
+    case BirdType.BaltimoreOriole:
+      return 5
+    default:
+      return 0
+  }
+}
+
 export {
   BirdSprite,
   BirdSize,
@@ -121,5 +142,6 @@ export {
   BirdPosition,
   BirdDirection,
   BirdDescription,
-  Bird
+  Bird,
+  BirdRareness
 }

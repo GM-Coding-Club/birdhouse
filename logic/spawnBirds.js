@@ -10,9 +10,11 @@ export default function spawnBirds() {
     if (randomTime === 1) { // 1 out of 360
       let randomBird = Math.floor((Math.random() * 7))
       let birdSize = BirdSize(randomBird, BirdPosition.FLYING)
-      let width = getState().window.width
+      let state = getState()
+      let width = state.window.width
+      let rows = state.board.rows
       let x = Math.floor(Math.random() * 2) == 1 ? -birdSize.x : width+birdSize.x
-      let y = 100
+      let y = Math.floor((Math.random() * rows)) * 50 + 100
       dispatch(spawnBird(randomBird, x, y))
       dispatch(spottedBird(randomBird))
     }

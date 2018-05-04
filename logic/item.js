@@ -23,31 +23,40 @@ var coordToCell = (state, x, y) => {
 }
 
 var canPlaceSunflower = (cell, row, col, cells) => {
-  return cell.item === undefined && row+1 === cells.length
+  return cell && cell.item === undefined && row+1 === cells.length
+}
+
+var itemBelowIs = (row, col, cells, itemType) => {
+  return (row+1 === cells.length || 
+    (cells.length >= row+1 && 
+      cells[col][row+1] && 
+      cells[col][row+1].item && 
+      cells[col][row+1].item.type === itemType
+    )
+  )
+}
+
+var canPlacePole = (cell, row, col, cells) => {
+  return cell && cell.item === undefined && 
+    (row+1 === cells.length || itemBelowIs(row, col, cells, ItemType.POLE))
+}
+
+var canPlaceBirdhouse = (cell, row, col, cells) => {
+  return cell && cell.item === undefined && itemBelowIs(row, col, cells, ItemType.POLE)
 }
 
 var canDropItem = (state, itemType, row, col) => {
   let cells = state.board.cells
-  let cell = cells[row][col]
+  let cell = cells[col][row]
   switch(itemType) {
     case ItemType.POLE:
-      return false
+      return canPlacePole(cell, row, col, cells)
     case ItemType.BIRDHOUSE:
-      return false
-    case ItemType.FEEDER:
-      return false
-    case ItemType.BIRDBATH:
-      return false
+      return canPlaceBirdhouse(cell, row, col, cells)
+    case ItemType.BIRDHOUSEBIG:
+      return canPlaceBirdhouse(cell, row, col, cells)
     case ItemType.SUNFLOWER:
       return canPlaceSunflower(cell, row, col, cells)
-    case ItemType.SEEDS:
-      return false
-    case ItemType.NUTS:
-      return false
-    case ItemType.WORMS:
-      return false
-    case ItemType.FRUIT:
-      return false
     default:
       return false
     }
