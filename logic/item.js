@@ -17,24 +17,40 @@ var coordToCell = (state, x, y) => {
   //let cellSpacing = (width-(cols*CELL_WIDTH))/cols
   let yOffset = y + state.window.scrollOffset
   return {
-    row: Math.floor(x/CELL_WIDTH),
-    col: Math.floor(yOffset/CELL_WIDTH)
+    col: Math.floor(x/CELL_WIDTH),
+    row: Math.floor(yOffset/CELL_WIDTH)
   }
 }
 
+var canPlaceSunflower = (cell, row, col, cells) => {
+  return cell.item === undefined && row+1 === cells.length
+}
+
 var canDropItem = (state, itemType, row, col) => {
-  for (let row of state.board.cells) {
-    for (let cell of row) {
-      if (cell.item !== undefined) {
-        console.log("full")
-        return false
-      } else {
-        console.log("set item")
-        return true
-      }
+  let cells = state.board.cells
+  let cell = cells[row][col]
+  switch(itemType) {
+    case ItemType.POLE:
+      return false
+    case ItemType.BIRDHOUSE:
+      return false
+    case ItemType.FEEDER:
+      return false
+    case ItemType.BIRDBATH:
+      return false
+    case ItemType.SUNFLOWER:
+      return canPlaceSunflower(cell, row, col, cells)
+    case ItemType.SEEDS:
+      return false
+    case ItemType.NUTS:
+      return false
+    case ItemType.WORMS:
+      return false
+    case ItemType.FRUIT:
+      return false
+    default:
+      return false
     }
-  }
-  return true
 }
 
 export function dropItem(itemType, x, y) {
@@ -45,7 +61,7 @@ export function dropItem(itemType, x, y) {
     if (canDropItem(getState(), itemType, cell.row, cell.col)) {
       let item = Item(itemType)
       dispatch(spendCash(item.price))
-      dispatch(setBoardItem(item, cell.row, cell.col))
+      dispatch(setBoardItem(item, cell.col, cell.row))
     }
     return Promise.resolve()
   }

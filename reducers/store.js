@@ -5,13 +5,14 @@ import { DEFAULT_CASH } from '../reducers/cash.js'
 let initialState = [
   Item(ItemType.POLE),
   Item(ItemType.BIRDHOUSE),
-  Item(ItemType.FEEDER),
-  Item(ItemType.BIRDBATH),
+  Item(ItemType.BIRDHOUSEBIG),
+  //Item(ItemType.FEEDER),
+  //Item(ItemType.BIRDBATH),
   Item(ItemType.SUNFLOWER),
-  Item(ItemType.SEEDS),
-  Item(ItemType.NUTS),
-  Item(ItemType.WORMS),
-  Item(ItemType.FRUIT)
+  //Item(ItemType.SEEDS),
+  //Item(ItemType.NUTS),
+  //Item(ItemType.WORMS),
+  //Item(ItemType.FRUIT)
 ]
 
 const storeReducer = (state = initialState, action) => {

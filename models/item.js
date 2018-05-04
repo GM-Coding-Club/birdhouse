@@ -1,17 +1,20 @@
 
-import robin from '../img/bird_10_26x26.png'
 import sunflower from '../img/sunflower.png'
+import birdhouseblue from '../img/birdhouse_blue.png'
+import birdhousegreen from '../img/birdhouse_green.png'
+import pole from '../img/vertical_pole.png'
 
 const ItemType = {
   POLE: 1,
   BIRDHOUSE: 2,
-  FEEDER: 3,
-  BIRDBATH: 4,
-  SUNFLOWER: 5,
-  SEEDS: 6,
-  NUTS: 7,
-  WORMS: 8,
-  FRUIT: 9
+  BIRDHOUSEBIG: 3,
+  FEEDER: 4,
+  BIRDBATH: 5,
+  SUNFLOWER: 6,
+  SEEDS: 7,
+  NUTS: 8,
+  WORMS: 9,
+  FRUIT: 10
 }
 
 var ItemPrice = (type) => {
@@ -20,6 +23,8 @@ var ItemPrice = (type) => {
       return 2
     case ItemType.BIRDHOUSE:
       return 10
+    case ItemType.BIRDHOUSEBIG:
+      return 40
     case ItemType.FEEDER:
       return 40
     case ItemType.BIRDBATH:
@@ -43,8 +48,14 @@ var ItemSprite = (type) => {
   switch (type) {
     case ItemType.SUNFLOWER:
       return sunflower
+    case ItemType.BIRDHOUSE:
+      return birdhouseblue
+    case ItemType.BIRDHOUSEBIG:
+      return birdhousegreen
+    case ItemType.POLE:
+      return pole
     default:
-      return robin
+      return undefined
   }
 }
 

@@ -66,7 +66,7 @@ class MenuTileComponent extends Component {
               top: "16%",
               width: "60%",
               height: "60%"
-            }}/>
+            }} resizeMode='contain'/>
           </ImageBackground>
         </TouchableHighlight>
       </View>

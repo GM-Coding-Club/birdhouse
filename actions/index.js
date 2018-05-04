@@ -100,12 +100,12 @@ export function addCellRows(rows) {
 
 export const SET_BOARD_ITEM = 'SET_BOARD_ITEM'
 
-export function setBoardItem(item, x, y) {
+export function setBoardItem(item, row, col) {
   return {
     type: SET_BOARD_ITEM,
     item,
-    x,
-    y
+    row,
+    col
   }
 }
 

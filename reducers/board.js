@@ -62,7 +62,7 @@ var setBoardItem = (state, action) => {
     cells: state.cells.map((rowObj, row) => {
       return rowObj.map((obj, col) => {
         return Object.assign({}, obj, {
-          item: (row === action.x && col === action.y) ? action.item : obj.item
+          item: (row === action.row && col === action.col) ? action.item : obj.item
         })
       })
     })
